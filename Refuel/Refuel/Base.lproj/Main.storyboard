@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hCa-wY-CfZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--油耗-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Refuel" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,88 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="油耗" id="vce-DZ-9q2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="98"/>
+            <point key="canvasLocation" x="1848" y="98"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BaA-HE-1m4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hCa-wY-CfZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dxC-AP-QTo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0DN-gT-mgL" kind="relationship" relationship="viewControllers" id="wjj-9K-Ju7"/>
+                        <segue destination="fMn-3G-bJD" kind="relationship" relationship="viewControllers" id="ecl-9q-irb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hry-se-25U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.753623188405811" y="97.767857142857139"/>
+        </scene>
+        <!--油耗-->
+        <scene sceneID="0Ra-WQ-H42">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0DN-gT-mgL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="油耗" image="cube" catalog="system" id="B0f-Ev-j6x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mkL-yO-Ys6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l1p-dL-ZOm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hqk-Fq-Etb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="97.767857142857139"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="ElA-3v-GUv">
+            <objects>
+                <viewController id="EbN-Bq-ebc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2uf-0B-F34">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="at5-aC-TGj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的" id="WN9-G5-QSy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzw-DT-eZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="755"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="3In-nR-UBa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fMn-3G-bJD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="person" catalog="system" id="8Aj-Q2-v6a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m36-k3-M8e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EbN-Bq-ebc" kind="relationship" relationship="rootViewController" id="ND1-v9-HRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RdO-oD-JZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="755"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cube" catalog="system" width="128" height="124"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
