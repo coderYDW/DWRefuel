@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftyJSON
+import Kingfisher
 
 class MineViewController: UIViewController {
 
@@ -48,6 +49,8 @@ class MineViewController: UIViewController {
         }
         
         testImage.image = R.image.snip20170804_10()
+        let url = URL(string: "https://goss4.cfp.cn/creative/vcg/800/new/VCG211183236544.jpg")
+        testImage.kf.setImage(with: url, placeholder: R.image.snip20170804_10())
         
     }
     
