@@ -67,14 +67,30 @@
         <!--我的-->
         <scene sceneID="ElA-3v-GUv">
             <objects>
-                <viewController id="EbN-Bq-ebc" sceneMemberID="viewController">
+                <viewController id="EbN-Bq-ebc" customClass="MineViewController" customModule="Refuel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2uf-0B-F34">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRK-un-dNC">
+                                <rect key="frame" x="87" y="108" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="J69-YQ-kjJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="fNu-hJ-mf3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="at5-aC-TGj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zRK-un-dNC" firstAttribute="centerX" secondItem="2uf-0B-F34" secondAttribute="centerX" id="RB4-j3-Yf8"/>
+                            <constraint firstItem="zRK-un-dNC" firstAttribute="top" secondItem="at5-aC-TGj" secondAttribute="top" constant="20" id="lQj-Oi-s2K"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="WN9-G5-QSy"/>
+                    <connections>
+                        <outlet property="testImage" destination="zRK-un-dNC" id="a2d-Fq-5nF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzw-DT-eZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

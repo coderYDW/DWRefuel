@@ -6,4 +6,7 @@ target ‘Refuel’ do
     pod 'Alamofire'
     pod 'SnapKit'
     pod 'SwiftyJSON'
+    pod 'ObjectMapper'
+    pod 'Kingfisher'
+    pod 'R.swift'
 end

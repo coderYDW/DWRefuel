@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18AFEEC225E0D2A1002CB9F2 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFEEC125E0D2A1002CB9F2 /* MineViewController.swift */; };
+		18AFEF0225E0F8BF002CB9F2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFEF0125E0F8BF002CB9F2 /* R.generated.swift */; };
 		DF82C51BA66469055E4150E5 /* Pods_Refuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0B2EED6EBC29DD469D216C /* Pods_Refuel.framework */; };
 		E4440C0F255FC798006A3A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4440C0E255FC798006A3A3D /* AppDelegate.swift */; };
 		E4440C11255FC798006A3A3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4440C10255FC798006A3A3D /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18AFEEC125E0D2A1002CB9F2 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		18AFEF0125E0F8BF002CB9F2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		5C0B2EED6EBC29DD469D216C /* Pods_Refuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Refuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7302430FCD10A5BC2B1712 /* Pods-Refuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Refuel.release.xcconfig"; path = "Target Support Files/Pods-Refuel/Pods-Refuel.release.xcconfig"; sourceTree = "<group>"; };
 		E4440C0B255FC798006A3A3D /* Refuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +93,6 @@
 				E8FC6DC91703D823DB70E928 /* Pods-Refuel.debug.xcconfig */,
 				5F7302430FCD10A5BC2B1712 /* Pods-Refuel.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -126,10 +129,12 @@
 		E4440C0D255FC798006A3A3D /* Refuel */ = {
 			isa = PBXGroup;
 			children = (
+				18AFEF0125E0F8BF002CB9F2 /* R.generated.swift */,
 				E4440C0E255FC798006A3A3D /* AppDelegate.swift */,
 				E4440C10255FC798006A3A3D /* SceneDelegate.swift */,
 				E4440C12255FC798006A3A3D /* ViewController.swift */,
 				E4440C14255FC798006A3A3D /* Main.storyboard */,
+				18AFEEC125E0D2A1002CB9F2 /* MineViewController.swift */,
 				E4440C1A255FC79A006A3A3D /* Assets.xcassets */,
 				E4440C1C255FC79A006A3A3D /* LaunchScreen.storyboard */,
 				E4440C1F255FC79A006A3A3D /* Info.plist */,
@@ -164,6 +169,7 @@
 			buildConfigurationList = E4440C38255FC79A006A3A3D /* Build configuration list for PBXNativeTarget "Refuel" */;
 			buildPhases = (
 				E8972AE797AEF26F80381510 /* [CP] Check Pods Manifest.lock */,
+				18AFEED025E0F4BE002CB9F2 /* ShellScript */,
 				E4440C07255FC798006A3A3D /* Sources */,
 				E4440C08255FC798006A3A3D /* Frameworks */,
 				E4440C09255FC798006A3A3D /* Resources */,
@@ -284,6 +290,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18AFEED025E0F4BE002CB9F2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Refuel/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Refuel/R.generated.swift\"\n";
+		};
 		86EAEC8EFC2ACE64A3905CD8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +359,8 @@
 				E4440C0F255FC798006A3A3D /* AppDelegate.swift in Sources */,
 				E4440C19255FC798006A3A3D /* Refuel.xcdatamodeld in Sources */,
 				E4440C11255FC798006A3A3D /* SceneDelegate.swift in Sources */,
+				18AFEEC225E0D2A1002CB9F2 /* MineViewController.swift in Sources */,
+				18AFEF0225E0F8BF002CB9F2 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
