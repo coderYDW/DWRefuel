@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -30,6 +32,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
         }
+//        AF.request("https://httpbin.org/get", method: .get)
+//            .validate(statusCode: 200..<300)
+//            .validate(contentType: ["application/json"])
+//            .responseData { response in
+//                switch response.result {
+//                case .success:
+//                    let json = JSON(response)
+//                    debugPrint(json)
+//                case let .failure(error):
+//                    print(error)
+//                }
+//            }
+        
+        
+        AF.request("https://httpbin.org/get", method: .get)
+            .response { response in
+                //response.result
+                debugPrint(response)
+            }
     }
 
     
@@ -50,6 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
+        
     }
     
 }
